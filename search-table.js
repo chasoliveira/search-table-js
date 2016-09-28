@@ -21,7 +21,7 @@
             inputSearch.keyup(function () {
                 if (typeof options.before === 'function')
                     options.before();
-                var val = '^(?=.*\\b' + $.trim($(this).val()).split(/\s+/).join('\\b)(?=.*\\b') + ').*$',
+                var val = '^(?=.*' + $.trim($(this).val()).split(/\s+/).join(')(?=.*') + ').*$',
                     reg = RegExp(val, 'i'),
                     text;
                 $rows.show().filter(function () {
