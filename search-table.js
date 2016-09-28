@@ -1,4 +1,4 @@
-﻿(function ($) {
+(function ($) {
     'use strict';
     function setUpOptions(options) {
         const placeholderConst = "Insira um termo para a pesquisa";
@@ -19,8 +19,8 @@
             $(table).before(divSearch);
             var $rows = $(table).find('tbody tr' + defaultOptions.filterTrClass);
             inputSearch.keyup(function () {
-                if (typeof options.before === 'function')
-                    options.before();
+                if (typeof defaultOptions.before === 'function')
+                    defaultOptions.before();
                 var val = '^(?=.*' + $.trim($(this).val()).split(/\s+/).join(')(?=.*') + ').*$',
                     reg = RegExp(val, 'i'),
                     text;
