@@ -1,7 +1,7 @@
 (function ($) {
     'use strict';
     function setUpOptions(options) {
-        const placeholderConst = "Insira um termo para a pesquisa";
+        const placeholderConst = "Enter a search term";
         var defaultOptions = options || { placeholder: placeholderConst, filterTrClass: "" };
         if (defaultOptions.placeholder === undefined)
             defaultOptions.placeholder = placeholderConst;
